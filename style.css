@@ -1,67 +1,60 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans';
-
-}
-    body { 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(58, 56, 56);
-        height: 100vh;
 }
 
-div{
-display: flex;
-align-items: center;
-text-align: center;
-position: relative;
-padding: 15px;
-width: 249px;
-height: 280px;
-box-shadow: 8px 8px 5px 2px black;
-border-radius: 15px;
-overflow: hidden;
-} 
-       
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58, 56, 56);
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 div::before{
     content: "";
-    border-radius: 15px;
-    background: conic-gradient(
-        rgb(0, 244, 13) 25deg,
+    background-image: conic-gradient(
+        rgb(0, 255, 13) 25deg,
         rgba(255, 0, 0, 0.6) 70deg,
         transparent 140deg
-
     );
-    width: 160px;
-    height:160px;
-    position:absolute; 
-    animation: roate2.5s liner infinite;
-} 
-
-div::after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: "border animation";
+    width: 150%;
+    height: 150%;
     position: absolute;
-    color: orange;
-    font-size: 32px;
-    line-height: 2;
-    border-radius: 12px;
-    width: 220px;
-    height: 260px;
-    bottom: rgb(58, 56, 56); 
-    box-shadow: inset 15px 15px 15px rgb(20, 20, 20);
+    animation: rotate 2s linear infinite;
 }
-
-@keyframes roate{
+div::after{
+    content: "Animation";
+    width: 190px;
+    height: 190px;
+    background: rgb(58, 56, 56);
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+@keyframes rotate {
     0%{
-        transform: rotate(0deg);  
+        transform: rotate(0deg);
     }
     100%{
-        transform: rotate(-360deg);  
+        transform: rotate(-360deg);
     }
 }
