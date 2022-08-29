@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans';
+
+}
+    body { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(58, 56, 56);
+        height: 100vh;
+}
+
+div{
+display: flex;
+align-items: center;
+text-align: center;
+position: relative;
+padding: 15px;
+width: 249px;
+height: 280px;
+box-shadow: 8px 8px 5px 2px black;
+border-radius: 15px;
+overflow: hidden;
+} 
+       
+div::before{
+    content: "";
+    border-radius: 15px;
+    background: conic-gradient(
+        rgb(0, 244, 13) 25deg,
+        rgba(255, 0, 0, 0.6) 70deg,
+        transparent 140deg
+
+    );
+    width: 160px;
+    height:160px;
+    position:absolute; 
+    animation: roate2.5s liner infinite;
+} 
+
+div::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "border animation";
+    position: absolute;
+    color: orange;
+    font-size: 32px;
+    line-height: 2;
+    border-radius: 12px;
+    width: 220px;
+    height: 260px;
+    bottom: rgb(58, 56, 56); 
+    box-shadow: inset 15px 15px 15px rgb(20, 20, 20);
+}
+
+@keyframes roate{
+    0%{
+        transform: rotate(0deg);  
+    }
+    100%{
+        transform: rotate(-360deg);  
+    }
+}
